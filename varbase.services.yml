@@ -7,6 +7,8 @@ services:
     class: '\Drupal\varbase\Config\ConfigBit'
     arguments:
       - '@element_info'
+  # This is a backward compatibility definition.
   varbase.definition_update_manager:
-    class: '\Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager'
+    class: '\Drupal\varbase_profile\Entity\VarbaseProfileEntityDefinitionUpdateManager'
     arguments: ['@class_resolver', '@entity.definition_update_manager']
+

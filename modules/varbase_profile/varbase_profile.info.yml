@@ -1,13 +1,8 @@
-name: Varbase
-type: profile
+name: Varbase Profile
+type: module
 description: 'Varbase is an enhanced Drupal distribution with a lot of necessities.'
 core: 8.x
 project: varbase
-distribution:
-  name: Varbase
-  install:
-    theme: vartheme_admin
-version: 8.x-7.x-dev
 install:
   - system
   - action
@@ -19,7 +14,6 @@ install:
   - image
   - views
   - file
-  - varbase_profile
 themes:
   - adminimal_theme
   - bootstrap_barrio

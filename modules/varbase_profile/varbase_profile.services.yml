@@ -1,0 +1,4 @@
+services:
+  varbase_profile.definition_update_manager:
+    class: '\Drupal\varbase_profile\Entity\VarbaseProfileEntityDefinitionUpdateManager'
+    arguments: ['@class_resolver', '@entity.definition_update_manager']
