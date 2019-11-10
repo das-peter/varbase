@@ -8,7 +8,10 @@ services:
     arguments:
       - '@element_info'
   # This is a backward compatibility definition.
+  'Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager':
+    alias: 'Drupal\varbase_profile\Entity\VarbaseProfileEntityDefinitionUpdateManager'
   varbase.definition_update_manager:
-    class: '\Drupal\varbase_profile\Entity\VarbaseProfileEntityDefinitionUpdateManager'
-    arguments: ['@class_resolver', '@entity.definition_update_manager']
+#    class: '\Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager'
+#    arguments: ['@class_resolver', '@entity.definition_update_manager']
+    alias: 'varbase_profile.definition_update_manager'
 

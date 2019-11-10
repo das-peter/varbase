@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\varbase_profile\entity;
+namespace Drupal\varbase_profile\Entity;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityDefinitionUpdateManagerInterface;
@@ -212,3 +212,5 @@ final class VarbaseProfileEntityDefinitionUpdateManager implements ContainerInje
   }
 
 }
+
+class_alias('Drupal\varbase_profile\Entity\VarbaseProfileEntityDefinitionUpdateManager', 'Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager');

@@ -3,4 +3,5 @@
  * Compatibility wrapper to new class structure.
  */
 
-class_alias('\Drupal\varbase_profile\entity\VarbaseProfileEntityDefinitionUpdateManager', '\Drupal\varbase\entity\VarbaseEntityDefinitionUpdateManager');
+require_once __DIR__ . '/../../modules/varbase_profile/src/Entity/VarbaseProfileEntityDefinitionUpdateManager.php';
+class_alias('Drupal\varbase_profile\Entity\VarbaseProfileEntityDefinitionUpdateManager', 'Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager');
