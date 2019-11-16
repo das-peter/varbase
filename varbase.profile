@@ -12,7 +12,12 @@ use Drupal\varbase\Config\ConfigBit;
 use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Form\AssemblerForm;
 use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
-use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
+
+/**
+ * Backward compatibility - ensures that the class alias is set at all times
+ * during installation.
+ */
+require_once __DIR__ . '/modules/varbase_profile/src/Entity/VarbaseProfileEntityDefinitionUpdateManager.php';
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().

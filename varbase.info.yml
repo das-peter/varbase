@@ -19,7 +19,6 @@ install:
   - image
   - views
   - file
-  - varbase_profile
 themes:
   - adminimal_theme
   - bootstrap_barrio

@@ -5,13 +5,6 @@
  * Enables modules and site configuration for a Varbase site installation.
  */
 
-use Symfony\Component\Yaml\Yaml;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\language\Entity\ConfigurableLanguage;
-use Drupal\varbase\Config\ConfigBit;
-use Drupal\varbase\Form\ConfigureMultilingualForm;
-use Drupal\varbase\Form\AssemblerForm;
-use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
 use Drupal\varbase_profile\Entity\VarbaseProfileEntityDefinitionUpdateManager;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -19,6 +12,12 @@ use Symfony\Component\Yaml\Yaml;
 use Drupal\Core\Config\InstallStorage;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Config\FileStorage;
+
+/**
+ * Backward compatibility - ensures that the class alias is set at all times
+ * during runtime.
+ */
+require_once __DIR__ . '/src/Entity/VarbaseProfileEntityDefinitionUpdateManager.php';
 
 /**
  * Batch function to fix entity updates to clear up any mismatched entity.
