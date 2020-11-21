@@ -12,6 +12,13 @@ So that I can use them after the install or update.
       And I wait
      Then I should see "Content"
 
+  @check @local @development @staging @production
+  Scenario: Check the Homepage content with Layout Builder
+     When I go to "/admin/content"
+      And I wait
+     Then I should see "Homepage"
+      And I should see "Landing page (Layout Builder)" in the "Homepage" row
+
    @check @local @development @staging @production
    Scenario: Check Files admin page
       When I go to "/admin/content/files"
@@ -26,7 +33,7 @@ So that I can use them after the install or update.
 
    @check @local @development @staging @production
    Scenario: Check Media Table admin page
-      When I go to "/admin/content/media-table"
+      When I go to "/admin/content/media"
        And I wait
       Then I should see "Media"
        And I should see "Thumbnail"
@@ -61,15 +68,6 @@ So that I can use them after the install or update.
      When I go to "/admin/structure/page_manager"
       And I wait
      Then I should see "Pages"
-      And I should see "Homepage"
-      And I should see "Total Control dashboard"
-
-  @check @local @development @staging @production
-  Scenario: Check the Page Manager main page.
-     When I go to "/admin/structure/page_manager"
-      And I wait
-     Then I should see "Pages"
-      And I should see "Homepage"
       And I should see "Total Control dashboard"
 
   @check @local @development @staging @production
@@ -87,10 +85,10 @@ So that I can use them after the install or update.
      Then I should see "Appearance"
       And I should see "Vartheme"
       And I should see "Vartheme (Bootstrap 4 - SASS)"
-      And I should see "Adminimal"
+      And I should see "Claro"
       And I should see "Bootstrap"
       And I should see "Bootstrap Barrio"
-      And I should see "Vartheme Admin"
+      And I should see "Vartheme Claro"
 
    @check @local @development @staging @production
    Scenario: Check active type of media types

@@ -2,12 +2,13 @@ name: Varbase
 type: profile
 description: 'Varbase is an enhanced Drupal distribution with a lot of necessities.'
 core: 8.x
+core_version_requirement: ^8 || ^9
 project: varbase
 distribution:
   name: Varbase
   install:
-    theme: vartheme_admin
-version: 8.x-7.x-dev
+    theme: vartheme_claro
+version: 8.x-8.x-dev
 install:
   - system
   - action
@@ -20,10 +21,11 @@ install:
   - views
   - file
 themes:
-  - adminimal_theme
   - bootstrap_barrio
   - vartheme_bs4
-  - vartheme_admin
+  - seven
+  - claro
+  - vartheme_claro
 
 interface translation project: varbase
 interface translation server pattern: profiles/varbase/translations/%language.po
